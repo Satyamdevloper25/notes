@@ -1,0 +1,104 @@
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #e8eaf6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    main {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Diary Page Lines */
+    main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 20px
+      );
+      pointer-events: none; 
+    }
+
+    .input {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: calc(100% - 24px); 
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      transition: border-color 0.3s;
+      font-family: 'Courier New', Courier, monospace; /* Monospace for writing feel */
+      background: #f9f9f9;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    textarea {
+      height: 150px; /* Increased height for textarea */
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+    @media (max-width: 400px) {
+      main {
+        padding: 20px;
+      }
+
+      input[type="text"],
+      textarea {
+        max-width: 100%;
+      }
+    }
+  
